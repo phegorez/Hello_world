@@ -35,7 +35,7 @@ class SignInPage extends StatelessWidget {
                     fontSize: 15.0,
                     //fontWeight: FontWeight.w300,
                   )),
-              color: Colors.green,
+              color: Colors.blue,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.all(
                 Radius.circular(16.0),
