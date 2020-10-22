@@ -1,12 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:hello/app_sign_in/sign_in_button.dart';
+import 'package:hello/app_sign_in/social_sign_in_button.dart';
 import 'package:hello/common_widgets/custom_raied_button.dart';
 import 'package:hello/app_sign_in/sign_in_button.dart';
 
 class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: _buildContent(), backgroundColor: Colors.grey[200]);
+    return Scaffold(
+        appBar: AppBar(
+          centerTitle: true,
+          title: Text(
+            'Get Gears',
+            style: TextStyle(fontFamily: 'Montserrat'),
+          ),
+        ),
+        body: _buildContent(),
+        backgroundColor: Colors.grey[200]);
   }
 
   Widget _buildContent() {
@@ -24,18 +34,20 @@ class SignInPage extends StatelessWidget {
                   fontFamily: 'Montserrat',
                   color: Colors.black)),
           SizedBox(
-            height: 8.0,
+            height: 48.0,
           ),
-          SignInButton(
+          SocialSignInButton(
+            assetName: 'images/google-logo.png',
             text: 'Sign in with Google',
-            textColor: Colors.white,
-            color: Color(0xFFD84B37),
+            textColor: Colors.black87,
+            color: Colors.white,
             onPressed: () {},
           ),
           SizedBox(
             height: 8.0,
           ),
-          SignInButton(
+          SocialSignInButton(
+            assetName: 'images/facebook-logo.png',
             text: 'Sign in with Facebook',
             textColor: Colors.white,
             color: Color(0xFF334D92),
